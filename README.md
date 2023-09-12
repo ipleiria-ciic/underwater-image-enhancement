@@ -73,3 +73,7 @@ Reef segmentation is a challenging task due to the complex nature of reef enviro
 | **U-Net V0**            | ~ $0.56$  |
 | **U-Net V2**            | ~ $0.82$  |
 
+
+```
+### Acknowledgements
+This work is partially funded by FCT - Fundação para a Ciência e a Tecnologia, I.P., through projects MIT-EXPL/ACC/0057/2021 and UIDB/04524/2020, and under the Scientific Employment Stimulus - Institutional Call - CEE/CINST/00051/2018.
