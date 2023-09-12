@@ -25,7 +25,7 @@ We evaluate the performance of four image enhancement algorithms on our underwat
 | **Waternet**| Waternet is a specialized algorithm for enhancing underwater images. It's designed to counter the adverse effects of underwater conditions, such as scattering and low light, resulting in clearer and more visually appealing underwater images. |
 
 
-## Table of Performance Metrics for Image Enhancement Algorithms
+## 1.2 Table of Performance Metrics for Image Enhancement Algorithms
 
 | Model              | UIQM             | UCIQE            |
 |----------------------|------------------|------------------|
@@ -38,7 +38,7 @@ We evaluate the performance of four image enhancement algorithms on our underwat
 - **UIQM** (Universal Image Quality Metric).
 - **UCIQE** (Universal Color Image Quality Evaluation) 
 
-### Key Takeaways
+### 1.3 Key Takeaways
 
 The evaluation of these models in terms of performance metrics:
 * MSRCR has the best performance in terms of UCIQE, while MSRCP has the best performance in terms of UIQM.
@@ -51,11 +51,11 @@ Qualitative evaluation of these models:
 * UWCNN has images lack sharpness and color fidelity.
 
 
-## Reef Segmentation
+## 2. Reef Segmentation
 
 Reef segmentation is a challenging task due to the complex nature of reef environments. The presence of various organisms, such as corals, sponges, and algae, makes it difficult to distinguish between them. In addition, the presence of sand and other debris can further complicate the segmentation process. We evaluate the performance of three semantic segmentation models on our reef image dataset captured in Leixoes bay, Portugal.
 
-### Tested Models
+### 2.1 Tested Models
 
 **DeepLabV3+**: DeepLabV3+ is a state-of-the-art semantic segmentation model that employs a deep convolutional neural network to perform pixel-wise classification. It is particularly effective in segmenting objects in images with complex backgrounds.
 
@@ -71,7 +71,7 @@ Reef segmentation is a challenging task due to the complex nature of reef enviro
 | **Swin Unet**   | Swin Unet is a semantic segmentation model using a transformer-based architecture. It combines encoder and decoder networks for pixel-wise classification. |
 
 
-### Preliminary Results
+### 2.2 Preliminary Results
 
 | Model              | Mean IoU             | 
 |----------------------|------------------|
