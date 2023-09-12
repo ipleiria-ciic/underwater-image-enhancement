@@ -57,14 +57,7 @@ Reef segmentation is a challenging task due to the complex nature of reef enviro
 
 ### 2.1 Tested Models
 
-**DeepLabV3+**: DeepLabV3+ is a state-of-the-art semantic segmentation model that employs a deep convolutional neural network to perform pixel-wise classification. It is particularly effective in segmenting objects in images with complex backgrounds.
-
-**U-Net Variants**: U-Net is a convolutional neural network-based model that is widely used in biomedical image segmentation. It is designed to perform pixel-wise classification by combining the encoder and decoder networks.
-
-**Swin Unet**: Swin Unet is a semantic segmentation model that employs a transformer-based architecture. It is designed to perform pixel-wise classification by combining the encoder and decoder networks.
-
-
-| Model           | Description                                                                                                                |
+ Model           | Description                                                                                                                |
 |-----------------|----------------------------------------------------------------------------------------------------------------------------|
 | **DeepLabV3+**  | DeepLabV3+ is a semantic segmentation model that utilizes a deep convolutional neural network for pixel-wise classification. It excels at segmenting objects in images with complex backgrounds. |
 | **U-Net Variants** | U-Net is a convolutional neural network-based model widely used in biomedical image segmentation. It combines encoder and decoder networks for pixel-wise classification. |
