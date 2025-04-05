@@ -37,7 +37,7 @@ We evaluate the performance of four image enhancement algorithms using our under
 |------------|--------------------------------------------------------------------------------------------------------------------------------|
 | **MSRCP**  | An image enhancement algorithm that combines multi-scale Retinex processing with colour priors. It effectively improves illumination and colour balance.  |
 | **MSRCR**  | A multi-scale Retinex-based method focused on colour restoration. It enhances colour fidelity and sharpness, making it suitable for various applications. |
-| **UWCNN++**  | A convolutional neural network-based model for enhancing underwater colour images. It leverages deep learning to improve image quality and visibility in underwater environments.  |
+| **UWCNN**  | A convolutional neural network-based model for enhancing underwater colour images. It leverages deep learning to improve image quality and visibility in underwater environments.  |
 | **Waternet**| A deep learning-based model designed to counter underwater image degradation caused by scattering and low light, producing clearer and more visually appealing images. |
 
 
