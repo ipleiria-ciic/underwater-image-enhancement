@@ -1,78 +1,72 @@
-# Underwater image improvement and reef segmentation preliminary work
+# Underwater Image Enhancement
 
 ---
 
 <p align="center">
-<img src="assets/CIIC_logo_v2.png" width="1000px"/>
+    <img src="Assets/CIIC-FCT.png" width="75%"/>
 </p>
 
 ---
 
-This repository stores the preliminary work made to explores image enhancement methods for underwater imagery and reef segmentation. 
+This repository contains the work conducted to explore and develop image enhancement methods specifically for underwater imagery.
 
-## 1. Image Enhancement
+## Repository Structure
+```
+underwater-image-enhancement/  
+│  
+├── 🎨 Assets/                  # Logos and other visual assets  
+├── 📓 Notebooks/               # Jupyter notebooks implementing the algorithms  
+├── 🧪 Results/                 # Output imagery from tested algorithms  
+├── 🙈 .gitignore               # Git ignore file  
+├── ⚙️ .gitattributes           # Git attributes file  
+├── 📜 README.md                # Project documentation  
+├── 🛠️ requirements.txt         # Project dependencies 
+```
 
-Image enhancement methods are used to improve the quality of underwater images, which are often degraded by the effects of scattering and absorption. These methods can be classified into two categories: classical image enhancement algorithms and deep learning-based models. Classical algorithms are based on the Retinex theory, which aims to restore the original color of an image by separating the illumination and reflectance components. Deep learning-based models, on the other hand, employ convolutional neural networks to enhance underwater images.
-We evaluate the performance of four image enhancement algorithms on our underwater image dataset captured in Leixoes bay, Portugal.
+## Image Enhancement
 
-### 1.1 Tested Models
+Image enhancement techniques are used to improve the quality of underwater images, which are often degraded by scattering and absorption effects. These techniques can be broadly categorised into two groups: classical image enhancement algorithms and deep learning-based models.
+
+Classical algorithms are often based on Retinex theory, which aims to restore an image’s original colours by separating its illumination and reflectance components. In contrast, deep learning-based models leverage convolutional neural networks to enhance underwater images.
+
+We evaluate the performance of four image enhancement algorithms using our underwater image dataset, captured in Leixões Bay, Portugal.
+
+### Tested Models
 
 | Model      | Description                                                                                                                    |
 |------------|--------------------------------------------------------------------------------------------------------------------------------|
-| **MSRCP**  | MSRCP is an image enhancement algorithm that incorporates multi-scale retinex processing with color priors. It excels in improving overall image quality, addressing issues like illumination and color balance.  |
-| **MSRCR**  | MSRCR is another image enhancement method that employs multi-scale retinex processing with a focus on color restoration. It excels in enhancing color fidelity and sharpness in images, suitable for various applications. |
-| **UWCNN**  | UWCNN is a convolutional neural network-based model designed for enhancing underwater color images. It utilizes deep learning techniques to enhance image quality and visibility in underwater environments.  |
-| **Waternet**| Waternet is a specialized algorithm for enhancing underwater images. It's designed to counter the adverse effects of underwater conditions, such as scattering and low light, resulting in clearer and more visually appealing underwater images. |
+| **MSRCP**  | An image enhancement algorithm that combines multi-scale Retinex processing with colour priors. It effectively improves illumination and colour balance.  |
+| **MSRCR**  | A multi-scale Retinex-based method focused on colour restoration. It enhances colour fidelity and sharpness, making it suitable for various applications. |
+| **UWCNN++**  | A convolutional neural network-based model for enhancing underwater colour images. It leverages deep learning to improve image quality and visibility in underwater environments.  |
+| **Waternet**| A deep learning-based model designed to counter underwater image degradation caused by scattering and low light, producing clearer and more visually appealing images. |
 
 
-## 1.2 Table of Performance Metrics for Image Enhancement Algorithms
+### Table of Performance Metrics for Image Enhancement Algorithms
 
-| Model              | UIQM             | UCIQE            |
-|----------------------|------------------|------------------|
-| Without Treatment    | $0.75 \pm 0.66$  | $18.06 \pm 3.39$ | 
-| **MSRCP**            | **$6.56 \pm 1.36$**  | $29.30 \pm 0.38$ | 
-| **MSRCR**            | $6.20 \pm 1.22$  | **$30.14 \pm 0.50$**  | 
-| **UWCNN**            | $1.74 \pm 0.70$  | $22.51 \pm 3.11$ | 
-| **Waternet**         | $2.13 \pm 0.68$  | $25.32 \pm 0.94$ |
+| Model         | UIQM $\uparrow$       | UCIQE $\uparrow$      | CCF $\downarrow$      |
+|---------------|-----------------------|-----------------------|-----------------------|
+| Original      | 0.40 $\pm$ 0.66       | 18.06 $\pm$ 3.39      | 1.10 $\pm$ 0.14       | 
+| **MSRCP**     | **6.56 $\pm$ 1.36**   | 29.30 $\pm$ 0.38      | 0.95 $\pm$ 0.26       | 
+| **MSRCR**     | 6.20 $\pm$ 1.22       | **30.14 $\pm$ 0.50**  | **0.53 $\pm$ 0.11**   | 
+| **UWCNN++**   | 1.18 $\pm$ 0.07       | 20.58 $\pm$ 3.66      | 1.09 $\pm$ 0.08       |
+| **Waternet**  | 2.13 $\pm$ 0.68       | 25.32 $\pm$ 0.94      | 0.74 $\pm$ 0.12       |
 
 - **UIQM** (Universal Image Quality Metric).
-- **UCIQE** (Universal Color Image Quality Evaluation) 
+- **UCIQE** (Universal Color Image Quality Evaluation).
+- **CCF** (Colorfulness, Contrast, and Fog Density).
 
-### 1.3 Key Takeaways
+### Key Takeaways
 
-The evaluation of these models in terms of performance metrics:
-* MSRCR has the best performance in terms of UCIQE, while MSRCP has the best performance in terms of UIQM.
-* UWCNN the worst performance in terms of UIQM and UCIQE.
-* WaterNet has competitive performance in terms of UCIQE.
+**Quantitative Evaluation (Performance Metrics)**
+- MSRCR achieves the best performance in terms of UCIQE and CCF.
+- MSRCP performs best in terms of UIQM.
+- UWCNN++ has the worst performance in both UIQM and UCIQE.
+- WaterNet and MSRCP demonstrates competitive performance in UCIQE.
 
-Qualitative evaluation of these models:
-* MSRCP does not perform well in terms of color restoration.
-* Waternet has images seem more natural and visually appealing.
-* UWCNN has images lack sharpness and color fidelity.
+**Qualitative Evaluation**
+- MSRCP struggles with colour restoration.
+- WaterNet produces images that appear more natural and visually appealing.
+- UWCNN++ generates images that lack sharpness and colour fidelity.
 
-
-## 2. Reef Segmentation
-
-Reef segmentation is a challenging task due to the complex nature of reef environments. The presence of various organisms, such as corals, sponges, and algae, makes it difficult to distinguish between them. In addition, the presence of sand and other debris can further complicate the segmentation process. We evaluate the performance of three semantic segmentation models on our reef image dataset captured in Leixoes bay, Portugal.
-
-### 2.1 Tested Models
-
- Model           | Description                                                                                                                |
-|-----------------|----------------------------------------------------------------------------------------------------------------------------|
-| **DeepLabV3+**  | DeepLabV3+ is a semantic segmentation model that utilizes a deep convolutional neural network for pixel-wise classification. It excels at segmenting objects in images with complex backgrounds. |
-| **U-Net Variants** | U-Net is a convolutional neural network-based model widely used in biomedical image segmentation. It combines encoder and decoder networks for pixel-wise classification. |
-| **Swin Unet**   | Swin Unet is a semantic segmentation model using a transformer-based architecture. It combines encoder and decoder networks for pixel-wise classification. |
-
-
-### 2.2 Preliminary Results
-
-| Model              | Mean IoU             | 
-|----------------------|------------------|
-| **DeepLabV3+**            | - |
-| **Swin Unet**            | ~ $0.80$   |
-| **U-Net V0**            | ~ $0.56$  |
-| **U-Net V2**            | ~ $0.82$  |
-
-
-#### Acknowledgements
-This work is partially funded by FCT - Fundação para a Ciência e a Tecnologia, I.P., through projects MIT-EXPL/ACC/0057/2021 and UIDB/04524/2020, and under the Scientific Employment Stimulus - Institutional Call - CEE/CINST/00051/2018.
+## Acknowledgements
+This work is partially funded by [FCT - Fundação para a Ciência e a Tecnologia](https://www.fct.pt), I.P., through projects MIT-EXPL/ACC/0057/2021 and UIDB/04524/2020, and under the Scientific Employment Stimulus - Institutional Call - CEE/CINST/00051/2018.
