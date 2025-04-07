@@ -1,4 +1,4 @@
-# Underwater Image Enhancement
+# A Comparative Study of Retinex Algorithms and Deep Models in Enhancing Underwater Image Quality
 
 ---
 
